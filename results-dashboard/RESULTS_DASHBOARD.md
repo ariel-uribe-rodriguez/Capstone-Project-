@@ -1,16 +1,16 @@
 # Results dashboard
 
-This dashboard reports the **12 weekly evaluations** for eight black-box functions. Source: `weekly_data.xlsx`. The recorded objective values and predictions are exported to `results/weekly_observations.csv`.
+This dashboard summarises the **12 weekly evaluations** of eight black-box functions. It is based on the recorded observations and predictions in [`weekly_observations.csv`](weekly_observations.csv).
 
-**Scope:** The best-observed values are maxima over the **12 weekly observations only**; they do not include the initial experimental design. Leaderboard ranks were supplied separately and are not computed from the workbook.
+> **Scope:** Running best values include the **12 weekly evaluations only**, not the initial experimental design. Leaderboard ranks were supplied separately and are not calculated from the observations.
 
 ## Observed convergence
 
 ![Convergence by function](figures/convergence.png)
 
-Each function has a separate vertical scale. The line is the running maximum of the observed weekly values, while crosses indicate individual evaluations.
+The line is the running maximum of the 12 weekly observations, and the crosses show the individual evaluations. Each function has its own vertical scale; the values are not directly comparable between functions.
 
-| Function | Dimensions | Best week | Best observed weekly objective | Rank / 39 |
+| Function | Dimensions | Best week | Best weekly observation | Rank / 39 |
 |---|---:|---:|---:|---:|
 | F1 | 2 | 7 | 8.6068e-33 | 33 |
 | F2 | 2 | 12 | 0.697246 | 13 |
@@ -21,26 +21,31 @@ Each function has a separate vertical scale. The line is the running maximum of 
 | F7 | 6 | 10 | 2.606740 | 19 |
 | F8 | 8 | 12 | 9.966392 | 24 |
 
-## Surrogate diagnostics
+## Function 1: near-zero objective values
+
+![Function 1 diagnostic](figures/function_1_near_zero.png)
+
+F1's observed values span many orders of magnitude and include negative values. The left panel uses a symmetric-log axis to preserve sign; the right panel shows `log10(abs(objective))`, with minus signs marking negative observations. These transformations are **for visualisation only** and do not modify the optimisation data. They also do not demonstrate that a transformed GP would perform better.
+
+## Surrogate predictions and observations
 
 ![Prediction diagnostics](figures/prediction_diagnostics.png)
 
-The line shows recorded predictive means; the band is mean ± 1.96 times the recorded predictive standard deviation; crosses show actual observations. These are **nominal**, not independently calibrated, intervals. For F5, the workbook's standard-deviation column is much smaller than the observed prediction discrepancies; its scaling and interpretation warrant verification before formal coverage claims.
+Lines show recorded predictive means, shaded bands represent mean ± 1.96 times the recorded predictive standard deviation, and crosses indicate observed objective values. These are **nominal intervals**, not validated coverage guarantees. In particular, the meaning and scaling of F5's recorded uncertainty values should be checked before drawing calibration conclusions.
 
 ## Interpretation and limitations
 
-- F2, F4 and F8 achieved their highest **weekly** objective in week 12; F3 peaked in week 4.
-- F1 values are extremely close to zero, making percentage prediction errors unsuitable.
-- Function objective scales differ substantially; do not compare raw objective magnitudes across functions.
-- These plots describe the historical experiment; they do not establish causality or superiority over alternative acquisition strategies.
-- To produce complete best-so-far trajectories, incorporate the initial-design observations and validate their provenance.
+- F2, F4 and F8 reached their best **weekly** observation in Week 12, while F3 reached it in Week 4.
+- F1's near-zero objective values make percentage errors unsuitable and ordinary linear plots uninformative.
+- The figures are descriptive, not proof that GP–UCB outperforms other strategies.
+- Initial-design observations are not included in the running-best curves. Complete optimisation trajectories require incorporating those observations with verified ordering.
 
-## Reproducing the figures
+## Reproduce the figures
 
-From this folder, install `numpy`, `matplotlib` and `artifact_tool`, then run:
+The CSV and Python script are in this folder. Install `numpy` and `matplotlib`, then run:
 
 ```bash
 python build_dashboard.py
 ```
 
-This regenerates both PNG figures and the CSV summaries from `weekly_data.xlsx`.
+This regenerates the three PNG figures from `weekly_observations.csv` without requiring the original Excel workbook.
