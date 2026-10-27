@@ -19,6 +19,7 @@ This repository documents a black-box optimisation (BBO) capstone built around *
 - [Problem formulation](#problem-formulation)
 - [Methodology](#methodology)
 - [Observed leaderboard performance](#observed-leaderboard-performance)
+- [Results dashboard](#results-dashboard)
 - [Case study: Function 1](#case-study-function-1)
 - [Evaluation philosophy](#evaluation-philosophy)
 - [Repository contents](#repository-contents)
@@ -117,6 +118,26 @@ The following positions were reported for the completed capstone among **39 part
 The mean position is **21.9** and the median is **21**. F6 and F2 were relatively competitive, while F1 and F3 indicate substantial room for improvement.
 
 **Interpretation:** These rankings motivate further investigation; they do not establish that a particular kernel, acquisition function or preprocessing choice caused the differences. Detailed convergence trajectories and sequential predictive diagnostics are needed for that assessment.
+
+
+## Results dashboard
+
+The results dashboard presents the experimental outcomes
+of the eight black-box functions across 12 weeks.
+
+It includes:
+
+- Best-observed objective values and convergence trajectories.
+- Gaussian Process prediction diagnostics.
+- Function-level performance comparisons.
+- Interpretation of model limitations and potential improvements.
+
+**[Explore the Results Dashboard](results-dashboard/RESULTS_DASHBOARD.md)**
+
+The dashboard provides a visual complement to the methodology
+and experimental findings presented in this README.
+
+---
 
 ## Case study: Function 1
 
