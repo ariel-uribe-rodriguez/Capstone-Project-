@@ -19,13 +19,16 @@ This repository documents a black-box optimisation (BBO) capstone built around *
 - [Problem formulation](#problem-formulation)
 - [Methodology](#methodology)
 - [Observed leaderboard performance](#observed-leaderboard-performance)
-- [Results dashboard](#results-dashboard)
+- [Results dashboard](results-dashboard/RESULTS_DASHBOARD.md)
+- [GP predictive diagnostics — Phase 3](results-dashboard/diagnostics/GP_DIAGNOSTICS.md)
+- [Sequential GP validation — Phase 4](results-dashboard/diagnostics/sequential-audit/README.md)
+- [Function 7: uncertainty and kernel diagnostics](results-dashboard/diagnostics/f7-analysis/F7_DIAGNOSTICS.md)
 - [Case study: Function 1](#case-study-function-1)
 - [Evaluation philosophy](#evaluation-philosophy)
 - [Repository contents](#repository-contents)
 - [Limitations and research roadmap](#limitations-and-research-roadmap)
 - [Documentation and reproducibility](#documentation-and-reproducibility)
-
+  
 ## Project at a glance
 
 | Aspect | Description |
