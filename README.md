@@ -1,4 +1,4 @@
-<img width="1436" height="538" alt="image" src="https://github.com/user-attachments/assets/f82f9094-8798-47d3-bde9-b0d94f514340" /># Black-Box Optimisation Lab
+# Black-Box Optimisation Lab
 
 ### Sequential Bayesian optimisation with Gaussian Processes
 
