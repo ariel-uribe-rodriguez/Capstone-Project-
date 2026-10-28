@@ -1,4 +1,4 @@
-# Black-Box Optimisation Lab
+<img width="1436" height="538" alt="image" src="https://github.com/user-attachments/assets/f82f9094-8798-47d3-bde9-b0d94f514340" /># Black-Box Optimisation Lab
 
 ### Sequential Bayesian optimisation with Gaussian Processes
 
@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-Scientific%20Computing-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Method](https://img.shields.io/badge/Method-Gaussian%20Process%20%2B%20UCB-526D82)](#methodology)
 [![Project](https://img.shields.io/badge/Project-Research%20Capstone-64748B)](#project-at-a-glance)
-[![Status](https://img.shields.io/badge/Status-Documentation%20and%20code%20consolidation-informational)](#repository-status)
+![Status](https://img.shields.io/badge/Status-Capstone%20completed-success)
 
 > **Research question:** How can we efficiently maximise unknown, expensive-to-evaluate functions—and how can we recognise when a surrogate-based optimiser is no longer providing reliable guidance?
 
