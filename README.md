@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-Scientific%20Computing-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Method](https://img.shields.io/badge/Method-Gaussian%20Process%20%2B%20UCB-526D82)](#methodology)
 [![Project](https://img.shields.io/badge/Project-Research%20Capstone-64748B)](#project-at-a-glance)
-![Status](https://img.shields.io/badge/Status-Capstone%20completed-success)
+[![Status](https://img.shields.io/badge/Status-Capstone%20completed-success)](#repository-status)
 
 > **Research question:** How can we efficiently maximise unknown, expensive-to-evaluate functions—and how can we recognise when a surrogate-based optimiser is no longer providing reliable guidance?
 
